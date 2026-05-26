@@ -18,7 +18,7 @@ body { font-family:'Segoe UI',sans-serif; background:#f0f2f5; padding-bottom:70p
 .header-title span { color:#00d4ff; }
 .header-sub { font-size:12px; color:#8892a4; }
 
-/* BOTTOM NAV */
+/* BOTTOM NAV — 3 tabs */
 .bottom-nav {
   position:fixed; bottom:0; left:0; right:0;
   background:#fff; display:flex;
@@ -29,9 +29,9 @@ body { font-family:'Segoe UI',sans-serif; background:#f0f2f5; padding-bottom:70p
   flex:1; border:none; background:transparent;
   display:flex; flex-direction:column;
   align-items:center; justify-content:center;
-  font-size:11px; color:#8892a4; cursor:pointer; gap:3px;
+  font-size:10px; color:#8892a4; cursor:pointer; gap:3px;
 }
-.nav-btn .nav-icon { font-size:20px; }
+.nav-btn .nav-icon { font-size:19px; }
 .nav-btn.active { color:#1a2035; font-weight:700; }
 
 /* PAGES */
@@ -40,75 +40,59 @@ body { font-family:'Segoe UI',sans-serif; background:#f0f2f5; padding-bottom:70p
 
 /* CARDS */
 .cards-wrap { padding:16px; display:flex; flex-direction:column; gap:12px; }
-.balance-card {
-  background:#162447; border-radius:16px; padding:24px 20px;
-}
+.balance-card { background:#162447; border-radius:16px; padding:24px 20px; }
 .card-icon { font-size:28px; margin-bottom:8px; }
-.card-label {
-  font-size:11px; font-weight:700; letter-spacing:1.5px;
-  text-transform:uppercase; margin-bottom:8px;
-}
+.card-label { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; }
 .balance-card .card-label { color:#8892a4; }
 .balance-amount { font-size:36px; font-weight:800; color:#fff; }
-
-.income-card {
-  background:#e8f5e9; border-radius:16px;
-  padding:20px; border:1px solid #c8e6c9; flex:1;
-}
+.income-card { background:#e8f5e9; border-radius:16px; padding:20px; border:1px solid #c8e6c9; flex:1; }
 .income-card .card-label { color:#388e3c; }
 .income-card .amount { font-size:26px; font-weight:800; color:#2e7d32; }
-
-.expense-card {
-  background:#fce4ec; border-radius:16px;
-  padding:20px; border:1px solid #f8bbd0; flex:1;
-}
+.expense-card { background:#fce4ec; border-radius:16px; padding:20px; border:1px solid #f8bbd0; flex:1; }
 .expense-card .card-label { color:#c62828; }
 .expense-card .amount { font-size:26px; font-weight:800; color:#c62828; }
 
 /* SECTION CARD */
-.section-card {
+.sc {
   background:#fff; border-radius:16px;
   padding:20px; margin:0 16px 12px;
   box-shadow:0 2px 8px rgba(0,0,0,0.06);
 }
-.section-title {
-  font-size:11px; font-weight:800; letter-spacing:1.5px;
-  color:#1a2035; text-transform:uppercase; margin-bottom:12px;
-}
-.divider { height:1px; background:#f0f0f0; margin-bottom:14px; }
+.st { font-size:11px; font-weight:800; letter-spacing:1.5px; color:#1a2035; text-transform:uppercase; margin-bottom:12px; }
+.dv { height:1px; background:#f0f0f0; margin-bottom:14px; }
 
 /* METER */
 .meter-row { display:flex; justify-content:space-between; margin-bottom:8px; }
-.meter-label { font-size:14px; color:#555; }
+.meter-lbl { font-size:14px; color:#555; }
 .meter-pct { font-size:16px; font-weight:800; color:#1a2035; }
-.progress-bar { height:10px; background:#e0e0e0; border-radius:10px; overflow:hidden; margin-bottom:10px; }
-.progress-fill { height:100%; border-radius:10px; transition:width 0.5s; }
-.meter-status { font-size:13px; color:#555; }
+.prog-bar { height:10px; background:#e0e0e0; border-radius:10px; overflow:hidden; margin-bottom:10px; }
+.prog-fill { height:100%; border-radius:10px; transition:width 0.5s; }
+.meter-msg { font-size:13px; color:#555; }
 
 /* FORM */
-.form-group { margin-bottom:14px; }
-.form-group label { font-size:13px; font-weight:600; color:#333; display:block; margin-bottom:6px; }
-.form-input {
+.fg { margin-bottom:14px; }
+.fg label { font-size:13px; font-weight:600; color:#333; display:block; margin-bottom:6px; }
+.fi {
   width:100%; padding:12px 14px;
   border:1.5px solid #e0e0e0; border-radius:10px;
   font-size:14px; color:#333; outline:none;
   background:#fafafa; transition:border-color 0.2s;
 }
-.form-input:focus { border-color:#1a2035; background:#fff; }
-select.form-input { appearance:none; -webkit-appearance:none; }
-.form-row { display:flex; gap:10px; }
-.form-row .form-group { flex:1; }
+.fi:focus { border-color:#1a2035; background:#fff; }
+select.fi { appearance:none; -webkit-appearance:none; }
+.fr { display:flex; gap:10px; }
+.fr .fg { flex:1; }
 
-/* TOGGLE BUTTONS */
-.toggle-row { display:flex; gap:10px; }
-.tog-btn {
+/* TOGGLES */
+.trow { display:flex; gap:10px; }
+.tb {
   flex:1; padding:12px; border:2px solid #e0e0e0;
   border-radius:10px; background:#fff;
   font-size:13px; font-weight:600; color:#666; cursor:pointer;
 }
-.tog-btn.income.active  { border-color:#2e7d32; background:#e8f5e9; color:#2e7d32; }
-.tog-btn.expense.active { border-color:#c62828; background:#fce4ec; color:#c62828; }
-.tog-btn.pay.active     { border-color:#1a2035; background:#e8eaf6; color:#1a2035; }
+.tb.income.active  { border-color:#2e7d32; background:#e8f5e9; color:#2e7d32; }
+.tb.expense.active { border-color:#c62828; background:#fce4ec; color:#c62828; }
+.tb.pay.active     { border-color:#1a2035; background:#e8eaf6; color:#1a2035; }
 
 .add-btn {
   width:100%; padding:14px; background:#1a2035;
@@ -116,9 +100,9 @@ select.form-input { appearance:none; -webkit-appearance:none; }
   font-size:15px; font-weight:700; cursor:pointer; margin-top:6px;
 }
 
-/* TRANSACTION ITEM */
+/* TXN ITEM */
 .txn-list { display:flex; flex-direction:column; gap:10px; }
-.txn-item {
+.ti {
   display:flex; align-items:center; gap:12px;
   padding:14px 12px; border-radius:12px;
   background:#fff; border:1px solid #f0f0f0;
@@ -126,48 +110,38 @@ select.form-input { appearance:none; -webkit-appearance:none; }
   box-shadow:0 1px 4px rgba(0,0,0,0.04);
   position:relative;
 }
-.txn-item.income  { border-left-color:#22c55e; }
-.txn-item.expense { border-left-color:#ef4444; }
-
-.txn-emoji {
+.ti.income  { border-left-color:#22c55e; }
+.ti.expense { border-left-color:#ef4444; }
+.te {
   width:44px; height:44px; background:#f5f5f5;
   border-radius:10px; display:flex;
   align-items:center; justify-content:center;
   font-size:22px; flex-shrink:0;
 }
-.txn-info { flex:1; min-width:0; }
-.txn-name { font-size:15px; font-weight:700; color:#1a2035; }
-.txn-meta { font-size:12px; color:#8892a4; margin-top:2px; }
-
-.pay-badge {
-  display:inline-block; font-size:10px; font-weight:700;
-  padding:2px 6px; border-radius:5px; margin-left:4px;
-}
+.ti-info { flex:1; min-width:0; }
+.ti-name { font-size:15px; font-weight:700; color:#1a2035; }
+.ti-meta { font-size:12px; color:#8892a4; margin-top:2px; }
+.pay-badge { display:inline-block; font-size:10px; font-weight:700; padding:2px 6px; border-radius:5px; margin-left:4px; }
 .pay-badge.cash   { background:#fff3e0; color:#e65100; }
 .pay-badge.online { background:#e3f2fd; color:#1565c0; }
+.ti-amt { font-size:15px; font-weight:800; flex-shrink:0; }
+.ti-amt.income  { color:#22c55e; }
+.ti-amt.expense { color:#ef4444; }
 
-.txn-amount { font-size:15px; font-weight:800; flex-shrink:0; }
-.txn-amount.income  { color:#22c55e; }
-.txn-amount.expense { color:#ef4444; }
-
-/* 3 DOTS MENU */
+/* 3 DOTS */
 .dots-btn {
   width:32px; height:32px; border:none;
   background:transparent; font-size:20px;
   color:#bbb; cursor:pointer; flex-shrink:0;
   border-radius:8px; display:flex;
-  align-items:center; justify-content:center;
-  font-weight:700; letter-spacing:1px;
+  align-items:center; justify-content:center; font-weight:700;
 }
-.dots-btn:active { background:#f0f0f0; }
-
 .dot-menu {
   position:absolute; right:8px; top:52px;
   background:#fff; border-radius:12px;
   box-shadow:0 4px 20px rgba(0,0,0,0.15);
-  z-index:50; display:none;
-  min-width:130px; border:1px solid #f0f0f0;
-  overflow:hidden;
+  z-index:50; display:none; min-width:130px;
+  border:1px solid #f0f0f0; overflow:hidden;
 }
 .dot-menu.open { display:block; }
 .dot-item {
@@ -175,20 +149,8 @@ select.form-input { appearance:none; -webkit-appearance:none; }
   padding:13px 16px; cursor:pointer;
   font-size:14px; font-weight:600;
 }
-.dot-item:active { background:#f5f5f5; }
 .dot-item.edit { color:#1a2035; }
 .dot-item.del  { color:#ef4444; }
-
-/* HISTORY TOP BAR */
-.hist-header {
-  display:flex; justify-content:space-between;
-  align-items:center; margin-bottom:12px;
-}
-.clear-btn {
-  padding:6px 12px; border:1.5px solid #ddd;
-  border-radius:8px; background:#fff;
-  font-size:12px; color:#666; cursor:pointer;
-}
 
 /* CHIPS */
 .chips { display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
@@ -199,34 +161,56 @@ select.form-input { appearance:none; -webkit-appearance:none; }
 }
 .chip.active { background:#1a2035; color:#fff; border-color:#1a2035; }
 
-/* EDIT MODAL */
-.modal-bg {
-  position:fixed; inset:0;
-  background:rgba(0,0,0,0.5);
-  z-index:200; display:none; align-items:flex-end;
-}
-.modal-bg.open { display:flex; }
-.modal-box {
-  background:#fff; width:100%;
-  border-radius:20px 20px 0 0;
-  padding:24px 20px 40px;
-  max-height:85vh; overflow-y:auto;
-}
-.modal-head {
-  display:flex; justify-content:space-between;
-  align-items:center; margin-bottom:16px;
-  font-size:16px; font-weight:800; color:#1a2035;
-}
-.modal-close {
-  width:30px; height:30px; border:none;
-  background:#f0f0f0; border-radius:50%;
-  font-size:16px; cursor:pointer; color:#666;
-}
-.save-btn {
-  width:100%; padding:14px; background:#1a2035;
+/* HIST HEADER */
+.hist-hdr { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.clear-btn { padding:6px 12px; border:1.5px solid #ddd; border-radius:8px; background:#fff; font-size:12px; color:#666; cursor:pointer; }
+.hist-note { font-size:11px; color:#aaa; margin-bottom:10px; text-align:center; }
+
+/* ANALYSIS */
+.ana-result { display:flex; flex-direction:column; gap:12px; margin-top:16px; }
+.ana-card { border-radius:12px; padding:16px; }
+.ana-card.green { background:#e8f5e9; }
+.ana-card.red   { background:#fce4ec; }
+.ana-card.blue  { background:#e3f2fd; }
+.ana-lbl { font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px; }
+.ana-card.green .ana-lbl { color:#388e3c; }
+.ana-card.red   .ana-lbl { color:#c62828; }
+.ana-card.blue  .ana-lbl { color:#1565c0; }
+.ana-val { font-size:26px; font-weight:800; }
+.ana-card.green .ana-val { color:#2e7d32; }
+.ana-card.red   .ana-val { color:#c62828; }
+.ana-card.blue  .ana-val { color:#1565c0; }
+
+.cat-breakdown { margin-top:4px; }
+.cat-row { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid #f0f0f0; }
+.cat-row:last-child { border-bottom:none; }
+.cat-name { font-size:13px; color:#555; }
+.cat-amt  { font-size:13px; font-weight:700; color:#1a2035; }
+
+.ana-btn {
+  width:100%; padding:13px; background:#1a2035;
   border:none; border-radius:10px; color:#fff;
-  font-size:15px; font-weight:700; cursor:pointer; margin-top:8px;
+  font-size:14px; font-weight:700; cursor:pointer; margin-top:6px;
 }
+
+/* EDIT MODAL */
+.modal-bg { position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200; display:none; align-items:flex-end; }
+.modal-bg.open { display:flex; }
+.modal-box { background:#fff; width:100%; border-radius:20px 20px 0 0; padding:24px 20px 40px; max-height:85vh; overflow-y:auto; }
+.modal-hd { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; font-size:16px; font-weight:800; color:#1a2035; }
+.modal-close { width:30px; height:30px; border:none; background:#f0f0f0; border-radius:50%; font-size:16px; cursor:pointer; color:#666; }
+.save-btn { width:100%; padding:14px; background:#1a2035; border:none; border-radius:10px; color:#fff; font-size:15px; font-weight:700; cursor:pointer; margin-top:8px; }
+
+/* DELETE CONFIRM MODAL */
+.del-modal-bg { position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:300; display:none; align-items:center; justify-content:center; padding:20px; }
+.del-modal-bg.open { display:flex; }
+.del-box { background:#fff; border-radius:16px; padding:24px 20px; width:100%; max-width:320px; text-align:center; }
+.del-icon { font-size:40px; margin-bottom:12px; }
+.del-title { font-size:16px; font-weight:800; color:#1a2035; margin-bottom:8px; }
+.del-msg { font-size:13px; color:#666; margin-bottom:20px; }
+.del-btns { display:flex; gap:10px; }
+.del-cancel { flex:1; padding:12px; border:2px solid #e0e0e0; border-radius:10px; background:#fff; font-size:14px; font-weight:600; color:#666; cursor:pointer; }
+.del-confirm { flex:1; padding:12px; border:none; border-radius:10px; background:#ef4444; font-size:14px; font-weight:700; color:#fff; cursor:pointer; }
 
 /* EMPTY */
 .empty { text-align:center; padding:30px 20px; color:#bbb; }
@@ -234,17 +218,14 @@ select.form-input { appearance:none; -webkit-appearance:none; }
 .empty-tx { font-size:13px; }
 
 /* FOOTER */
-.footer-credit {
-  text-align:center; padding:16px;
-  color:#8892a4; font-size:12px;
-  border-top:1px solid #e8e8e8;
-  margin:4px 16px 0;
-}
+.footer-credit { text-align:center; padding:16px; color:#8892a4; font-size:12px; border-top:1px solid #e8e8e8; margin:4px 16px 0; }
 .footer-credit strong { color:#1a2035; }
-.footer-credit span   { color:#00d4ff; }
+.footer-credit span { color:#00d4ff; }
 
-#hist-page { padding:16px; }
-#hist-page .section-card { margin:0; }
+#hist-page  { padding:16px; }
+#ana-page   { padding:16px; }
+#hist-page .sc { margin:0; }
+#ana-page  .sc { margin:0 0 12px 0; }
 </style>
 </head>
 <body>
@@ -255,10 +236,9 @@ select.form-input { appearance:none; -webkit-appearance:none; }
   <div class="header-sub">by CodeKaroBhai</div>
 </div>
 
-<!-- ═══════════ HOME PAGE ═══════════ -->
+<!-- ══════════════ HOME PAGE ══════════════ -->
 <div id="home-page" class="page active">
 
-  <!-- Summary Cards -->
   <div class="cards-wrap">
     <div class="balance-card">
       <div class="card-icon">💼</div>
@@ -280,40 +260,37 @@ select.form-input { appearance:none; -webkit-appearance:none; }
   </div>
 
   <!-- Spending Meter -->
-  <div class="section-card">
-    <div class="section-title">Spending Meter</div>
-    <div class="divider"></div>
+  <div class="sc">
+    <div class="st">Spending Meter</div>
+    <div class="dv"></div>
     <div class="meter-row">
-      <span class="meter-label">Expense / Income</span>
+      <span class="meter-lbl">Expense / Income</span>
       <span class="meter-pct" id="spend-pct">0%</span>
     </div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="prog" style="width:0%;background:#22c55e"></div>
+    <div class="prog-bar">
+      <div class="prog-fill" id="prog" style="width:0%;background:#22c55e"></div>
     </div>
-    <div class="meter-status" id="meter-msg">😊 Pehle kuch add karo!</div>
+    <div class="meter-msg" id="meter-msg">😊 Pehle kuch add karo!</div>
   </div>
 
-  <!-- Add Transaction Form -->
-  <div class="section-card">
-    <div class="section-title">Add Transaction</div>
-    <div class="divider"></div>
+  <!-- Add Form -->
+  <div class="sc">
+    <div class="st">Add Transaction</div>
+    <div class="dv"></div>
 
-    <!-- Name -->
-    <div class="form-group">
+    <div class="fg">
       <label>Transaction Name</label>
-      <input class="form-input" id="f-name" type="text"
-        placeholder="e.g. Maggi, Salary, Recharge...">
+      <input class="fi" id="f-name" type="text" placeholder="e.g. Maggi, Salary, Recharge...">
     </div>
 
-    <!-- Amount + Category -->
-    <div class="form-row">
-      <div class="form-group">
+    <div class="fr">
+      <div class="fg">
         <label>Amount (₹)</label>
-        <input class="form-input" id="f-amt" type="number" placeholder="0" min="0">
+        <input class="fi" id="f-amt" type="number" placeholder="0" min="0">
       </div>
-      <div class="form-group">
+      <div class="fg">
         <label>Category</label>
-        <select class="form-input" id="f-cat">
+        <select class="fi" id="f-cat">
           <option value="Food">🍜 Food</option>
           <option value="Transport">🚗 Transport</option>
           <option value="Bills">💡 Bills</option>
@@ -326,52 +303,45 @@ select.form-input { appearance:none; -webkit-appearance:none; }
       </div>
     </div>
 
-    <!-- Date — default today -->
-    <div class="form-group">
+    <div class="fg">
       <label>Date</label>
-      <input class="form-input" id="f-date" type="date">
+      <input class="fi" id="f-date" type="date">
     </div>
 
-    <!-- Type -->
-    <div class="form-group">
+    <div class="fg">
       <label>Type</label>
-      <div class="toggle-row">
-        <button class="tog-btn income active" id="b-inc"
-          onclick="setType('income')">📈 Income</button>
-        <button class="tog-btn expense" id="b-exp"
-          onclick="setType('expense')">📉 Expense</button>
+      <div class="trow">
+        <button class="tb income active" id="b-inc" onclick="setType('income')">📈 Income</button>
+        <button class="tb expense" id="b-exp" onclick="setType('expense')">📉 Expense</button>
       </div>
     </div>
 
-    <!-- Payment -->
-    <div class="form-group">
+    <div class="fg">
       <label>Payment Method</label>
-      <div class="toggle-row">
-        <button class="tog-btn pay active" id="b-cash"
-          onclick="setPay('cash')">💵 Cash</button>
-        <button class="tog-btn pay" id="b-online"
-          onclick="setPay('online')">📱 Online</button>
+      <div class="trow">
+        <button class="tb pay active" id="b-cash" onclick="setPay('cash')">💵 Cash</button>
+        <button class="tb pay" id="b-online" onclick="setPay('online')">📱 Online</button>
       </div>
     </div>
 
     <button class="add-btn" onclick="addTxn()">+ Add Transaction</button>
   </div>
 
-  <!-- Footer Credit -->
   <div class="footer-credit">
     Made with ❤️ by <strong>Sandeep Kumar</strong><br>
     <span>BCA Student</span> · 2026
   </div>
 </div>
 
-<!-- ═══════════ HISTORY PAGE ═══════════ -->
+<!-- ══════════════ HISTORY PAGE (Last 2 days) ══════════════ -->
 <div id="hist-page" class="page">
-  <div class="section-card">
-    <div class="hist-header">
-      <div class="section-title">Transaction History</div>
+  <div class="sc">
+    <div class="hist-hdr">
+      <div class="st">Recent History</div>
       <button class="clear-btn" onclick="clearAll()">Clear All</button>
     </div>
-    <div class="divider"></div>
+    <div class="dv"></div>
+    <div class="hist-note" id="hist-note">📅 Last 2 days transactions</div>
     <div class="chips">
       <div class="chip active" onclick="setFilt('all',this)">All</div>
       <div class="chip" onclick="setFilt('income',this)">Income</div>
@@ -383,26 +353,96 @@ select.form-input { appearance:none; -webkit-appearance:none; }
   </div>
 </div>
 
-<!-- ═══════════ EDIT MODAL ═══════════ -->
+<!-- ══════════════ ANALYSIS PAGE ══════════════ -->
+<div id="ana-page" class="page">
+
+  <!-- Date Range Picker -->
+  <div class="sc">
+    <div class="st">📊 Date Range Analysis</div>
+    <div class="dv"></div>
+
+    <div class="fr">
+      <div class="fg">
+        <label>From Date</label>
+        <input class="fi" id="ana-from" type="date">
+      </div>
+      <div class="fg">
+        <label>To Date</label>
+        <input class="fi" id="ana-to" type="date">
+      </div>
+    </div>
+
+    <button class="ana-btn" onclick="runAnalysis()">🔍 Analyse Karo</button>
+  </div>
+
+  <!-- Results -->
+  <div id="ana-results" style="display:none">
+
+    <!-- Summary Cards -->
+    <div class="sc">
+      <div class="st">Summary</div>
+      <div class="dv"></div>
+      <div style="display:flex;gap:10px;margin-bottom:12px">
+        <div class="ana-card green" style="flex:1">
+          <div class="ana-lbl">Income</div>
+          <div class="ana-val" id="ana-inc">₹0</div>
+        </div>
+        <div class="ana-card red" style="flex:1">
+          <div class="ana-lbl">Expense</div>
+          <div class="ana-val" id="ana-exp">₹0</div>
+        </div>
+      </div>
+      <div class="ana-card blue">
+        <div class="ana-lbl">Net Balance</div>
+        <div class="ana-val" id="ana-net">₹0</div>
+      </div>
+    </div>
+
+    <!-- Category Breakdown -->
+    <div class="sc">
+      <div class="st">Category Breakdown</div>
+      <div class="dv"></div>
+      <div class="cat-breakdown" id="cat-breakdown"></div>
+    </div>
+
+    <!-- Transactions in range -->
+    <div class="sc">
+      <div class="st">Transactions</div>
+      <div class="dv"></div>
+      <div class="txn-list" id="ana-txn-list"></div>
+    </div>
+  </div>
+
+  <div id="ana-empty" style="display:none">
+    <div class="sc">
+      <div class="empty">
+        <div class="empty-ic">📭</div>
+        <div class="empty-tx">Is date range mein koi transaction nahi!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ EDIT MODAL ══════════════ -->
 <div class="modal-bg" id="edit-modal">
   <div class="modal-box">
-    <div class="modal-head">
+    <div class="modal-hd">
       ✏️ Edit Transaction
       <button class="modal-close" onclick="closeEdit()">✕</button>
     </div>
     <input type="hidden" id="e-id">
-    <div class="form-group">
+    <div class="fg">
       <label>Transaction Name</label>
-      <input class="form-input" id="e-name" type="text">
+      <input class="fi" id="e-name" type="text">
     </div>
-    <div class="form-row">
-      <div class="form-group">
+    <div class="fr">
+      <div class="fg">
         <label>Amount (₹)</label>
-        <input class="form-input" id="e-amt" type="number">
+        <input class="fi" id="e-amt" type="number">
       </div>
-      <div class="form-group">
+      <div class="fg">
         <label>Category</label>
-        <select class="form-input" id="e-cat">
+        <select class="fi" id="e-cat">
           <option value="Food">🍜 Food</option>
           <option value="Transport">🚗 Transport</option>
           <option value="Bills">💡 Bills</option>
@@ -414,25 +454,38 @@ select.form-input { appearance:none; -webkit-appearance:none; }
         </select>
       </div>
     </div>
-    <div class="form-group">
+    <div class="fg">
       <label>Date</label>
-      <input class="form-input" id="e-date" type="date">
+      <input class="fi" id="e-date" type="date">
     </div>
-    <div class="form-group">
+    <div class="fg">
       <label>Type</label>
-      <div class="toggle-row">
-        <button class="tog-btn income" id="eb-inc" onclick="setEType('income')">📈 Income</button>
-        <button class="tog-btn expense" id="eb-exp" onclick="setEType('expense')">📉 Expense</button>
+      <div class="trow">
+        <button class="tb income" id="eb-inc" onclick="setEType('income')">📈 Income</button>
+        <button class="tb expense" id="eb-exp" onclick="setEType('expense')">📉 Expense</button>
       </div>
     </div>
-    <div class="form-group">
+    <div class="fg">
       <label>Payment</label>
-      <div class="toggle-row">
-        <button class="tog-btn pay" id="eb-cash" onclick="setEPay('cash')">💵 Cash</button>
-        <button class="tog-btn pay" id="eb-online" onclick="setEPay('online')">📱 Online</button>
+      <div class="trow">
+        <button class="tb pay" id="eb-cash" onclick="setEPay('cash')">💵 Cash</button>
+        <button class="tb pay" id="eb-online" onclick="setEPay('online')">📱 Online</button>
       </div>
     </div>
     <button class="save-btn" onclick="saveEdit()">💾 Save Changes</button>
+  </div>
+</div>
+
+<!-- ══════════════ DELETE CONFIRM MODAL ══════════════ -->
+<div class="del-modal-bg" id="del-modal">
+  <div class="del-box">
+    <div class="del-icon">🗑️</div>
+    <div class="del-title">Delete Transaction?</div>
+    <div class="del-msg">Ye transaction hamesha ke liye delete ho jaayegi!</div>
+    <div class="del-btns">
+      <button class="del-cancel" onclick="closeDel()">Cancel</button>
+      <button class="del-confirm" onclick="confirmDel()">Delete</button>
+    </div>
   </div>
 </div>
 
@@ -444,33 +497,45 @@ select.form-input { appearance:none; -webkit-appearance:none; }
   <button class="nav-btn" id="nav-hist" onclick="goPage('hist')">
     <span class="nav-icon">📋</span>History
   </button>
+  <button class="nav-btn" id="nav-ana" onclick="goPage('ana')">
+    <span class="nav-icon">📊</span>Analysis
+  </button>
 </div>
 
 <script>
 const EMOJI = {Food:'🍜',Transport:'🚗',Bills:'💡',Shopping:'🛒',Entertainment:'🎮',Education:'📚',Salary:'💼',Other:'💰'};
+const CATS  = ['Food','Transport','Bills','Shopping','Entertainment','Education','Salary','Other'];
 
-let txns    = JSON.parse(localStorage.getItem('kxt')||'[]');
-let cType   = 'income';
-let cPay    = 'cash';
-let cFilt   = 'all';
-let eType   = 'income';
-let ePay    = 'cash';
-let openId  = null;
+let txns   = JSON.parse(localStorage.getItem('kxt')||'[]');
+let cType  = 'income';
+let cPay   = 'cash';
+let cFilt  = 'all';
+let eType  = 'income';
+let ePay   = 'cash';
+let openId = null;
+let delPendingId = null;
 
-// Set today as default date
+/* ── Today ── */
 function today(){ return new Date().toISOString().split('T')[0]; }
-document.getElementById('f-date').value = today();
+function daysAgo(n){
+  const d=new Date(); d.setDate(d.getDate()-n);
+  return d.toISOString().split('T')[0];
+}
 
-function save(){ localStorage.setItem('kxt', JSON.stringify(txns)); }
+/* Default dates */
+document.getElementById('f-date').value  = today();
+document.getElementById('ana-from').value = daysAgo(30);
+document.getElementById('ana-to').value   = today();
 
+function save(){ localStorage.setItem('kxt',JSON.stringify(txns)); }
 function fmt(n){ return '₹'+Number(n).toLocaleString('en-IN'); }
-
 function fmtDate(s){
   if(!s) return '';
-  const d = new Date(s+'T00:00:00');
+  const d=new Date(s+'T00:00:00');
   return d.getDate()+' '+d.toLocaleString('default',{month:'short'})+' '+d.getFullYear();
 }
 
+/* ── Type / Pay toggles ── */
 function setType(t){
   cType=t;
   document.getElementById('b-inc').classList.toggle('active',t==='income');
@@ -492,14 +557,18 @@ function setEPay(p){
   document.getElementById('eb-online').classList.toggle('active',p==='online');
 }
 
+/* ── Page navigation ── */
 function goPage(p){
-  document.getElementById('home-page').classList.toggle('active',p==='home');
-  document.getElementById('hist-page').classList.toggle('active',p==='hist');
-  document.getElementById('nav-home').classList.toggle('active',p==='home');
-  document.getElementById('nav-hist').classList.toggle('active',p==='hist');
-  closeMenus(); renderAll();
+  ['home','hist','ana'].forEach(x=>{
+    document.getElementById(x+'-page').classList.toggle('active',x===p);
+    document.getElementById('nav-'+x).classList.toggle('active',x===p);
+  });
+  closeMenus();
+  if(p==='home') renderSummary();
+  if(p==='hist') renderHist();
 }
 
+/* ── History filter chips ── */
 function setFilt(f,el){
   cFilt=f;
   document.querySelectorAll('#hist-page .chips .chip').forEach(c=>c.classList.remove('active'));
@@ -507,48 +576,50 @@ function setFilt(f,el){
   renderHist();
 }
 
+/* ── Add transaction ── */
 function addTxn(){
-  const name = document.getElementById('f-name').value.trim();
-  const amt  = parseFloat(document.getElementById('f-amt').value);
-  const cat  = document.getElementById('f-cat').value;
-  const date = document.getElementById('f-date').value || today();
-  if(!name){alert('Transaction name daalo!');return;}
-  if(!amt||amt<=0){alert('Sahi amount daalo!');return;}
+  const name=document.getElementById('f-name').value.trim();
+  const amt =parseFloat(document.getElementById('f-amt').value);
+  const cat =document.getElementById('f-cat').value;
+  const date=document.getElementById('f-date').value||today();
+  if(!name){showToast('Transaction name daalo!');return;}
+  if(!amt||amt<=0){showToast('Sahi amount daalo!');return;}
   txns.unshift({id:Date.now(),name,amt,cat,date,type:cType,pay:cPay});
   save();
   document.getElementById('f-name').value='';
   document.getElementById('f-amt').value='';
   document.getElementById('f-date').value=today();
-  renderAll();
+  renderSummary();
+  showToast('✅ Transaction add ho gayi!');
 }
 
 /* ── 3 dots menu ── */
 function toggleMenu(id){
-  if(openId && openId!==id) closeMenus();
-  const m = document.getElementById('dm-'+id);
-  if(!m) return;
-  const was = m.classList.contains('open');
+  if(openId&&openId!==id) closeMenus();
+  const m=document.getElementById('dm-'+id);
+  if(!m)return;
+  const was=m.classList.contains('open');
   closeMenus();
-  if(!was){ m.classList.add('open'); openId=id; }
+  if(!was){m.classList.add('open');openId=id;}
 }
 function closeMenus(){
   document.querySelectorAll('.dot-menu').forEach(m=>m.classList.remove('open'));
   openId=null;
 }
 document.addEventListener('click',e=>{
-  if(!e.target.closest('.dots-btn')&&!e.target.closest('.dot-menu')) closeMenus();
+  if(!e.target.closest('.dots-btn')&&!e.target.closest('.dot-menu'))closeMenus();
 });
 
 /* ── Edit ── */
 function openEdit(id){
   closeMenus();
-  const t = txns.find(x=>x.id===id);
-  if(!t) return;
-  document.getElementById('e-id').value   = id;
-  document.getElementById('e-name').value = t.name;
-  document.getElementById('e-amt').value  = t.amt;
-  document.getElementById('e-cat').value  = t.cat;
-  document.getElementById('e-date').value = t.date||today();
+  const t=txns.find(x=>x.id===id);
+  if(!t)return;
+  document.getElementById('e-id').value  =id;
+  document.getElementById('e-name').value=t.name;
+  document.getElementById('e-amt').value =t.amt;
+  document.getElementById('e-cat').value =t.cat;
+  document.getElementById('e-date').value=t.date||today();
   eType=t.type; ePay=t.pay||'cash';
   setEType(eType); setEPay(ePay);
   document.getElementById('edit-modal').classList.add('open');
@@ -557,68 +628,94 @@ function closeEdit(){
   document.getElementById('edit-modal').classList.remove('open');
 }
 function saveEdit(){
-  const id   = parseInt(document.getElementById('e-id').value);
-  const name = document.getElementById('e-name').value.trim();
-  const amt  = parseFloat(document.getElementById('e-amt').value);
-  const cat  = document.getElementById('e-cat').value;
-  const date = document.getElementById('e-date').value;
-  if(!name){alert('Name daalo!');return;}
-  if(!amt||amt<=0){alert('Sahi amount!');return;}
-  const i = txns.findIndex(x=>x.id===id);
+  const id  =parseInt(document.getElementById('e-id').value);
+  const name=document.getElementById('e-name').value.trim();
+  const amt =parseFloat(document.getElementById('e-amt').value);
+  const cat =document.getElementById('e-cat').value;
+  const date=document.getElementById('e-date').value;
+  if(!name){showToast('Name daalo!');return;}
+  if(!amt||amt<=0){showToast('Sahi amount!');return;}
+  const i=txns.findIndex(x=>x.id===id);
   if(i!==-1){
     txns[i]={id,name,amt,cat,date,type:eType,pay:ePay};
-    save(); closeEdit(); renderAll();
+    save(); closeEdit(); renderHist();
+    showToast('✅ Transaction update ho gayi!');
   }
 }
 
-/* ── Delete ── */
+/* ── Delete — custom modal (no confirm()) ── */
 function delTxn(id){
   closeMenus();
-  if(confirm('Delete karein?')){
-    txns=txns.filter(x=>x.id!==id);
-    save(); renderAll();
-  }
+  delPendingId=id;
+  document.getElementById('del-modal').classList.add('open');
+}
+function closeDel(){
+  delPendingId=null;
+  document.getElementById('del-modal').classList.remove('open');
+}
+function confirmDel(){
+  if(delPendingId===null)return;
+  txns=txns.filter(x=>x.id!==delPendingId);
+  save(); closeDel(); renderHist(); renderSummary();
+  showToast('🗑️ Transaction delete ho gayi!');
 }
 function clearAll(){
-  if(confirm('Saari transactions delete karein?')){txns=[];save();renderAll();}
+  delPendingId=-1;
+  document.querySelector('.del-title').textContent='Sab Delete Karein?';
+  document.querySelector('.del-msg').textContent='Saari transactions hamesha ke liye delete ho jaayengi!';
+  document.getElementById('del-modal').classList.add('open');
 }
+// Override confirmDel for clearAll
+const _origConfirm=confirmDel;
+window.confirmDel=function(){
+  if(delPendingId===-1){
+    txns=[];
+    document.querySelector('.del-title').textContent='Delete Transaction?';
+    document.querySelector('.del-msg').textContent='Ye transaction hamesha ke liye delete ho jaayegi!';
+    save(); closeDel(); renderHist(); renderSummary();
+    showToast('🗑️ Sab clear ho gaya!');
+  } else {
+    _origConfirm();
+  }
+};
 
-/* ── Render ── */
+/* ── Render Summary ── */
 function renderSummary(){
-  const inc = txns.filter(t=>t.type==='income').reduce((s,t)=>s+t.amt,0);
-  const exp = txns.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amt,0);
-  const net = inc-exp;
-  const pct = inc>0?Math.min(Math.round(exp/inc*100),100):0;
-  document.getElementById('net-bal').textContent = fmt(net);
-  document.getElementById('tot-inc').textContent = fmt(inc);
-  document.getElementById('tot-exp').textContent = fmt(exp);
-  document.getElementById('spend-pct').textContent = pct+'%';
-  const p = document.getElementById('prog');
-  p.style.width      = pct+'%';
-  p.style.background = pct<50?'#22c55e':pct<80?'#f59e0b':'#ef4444';
+  const inc=txns.filter(t=>t.type==='income').reduce((s,t)=>s+t.amt,0);
+  const exp=txns.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amt,0);
+  const net=inc-exp;
+  const pct=inc>0?Math.min(Math.round(exp/inc*100),100):0;
+  document.getElementById('net-bal').textContent=fmt(net);
+  document.getElementById('tot-inc').textContent=fmt(inc);
+  document.getElementById('tot-exp').textContent=fmt(exp);
+  document.getElementById('spend-pct').textContent=pct+'%';
+  const p=document.getElementById('prog');
+  p.style.width     =pct+'%';
+  p.style.background=pct<50?'#22c55e':pct<80?'#f59e0b':'#ef4444';
   let msg='😊 Pehle kuch add karo!';
   if(txns.length>0){
-    if(pct===0)      msg='💰 Koi kharcha nahi!';
-    else if(pct<50)  msg='✅ Bahut badhiya savings!';
-    else if(pct<80)  msg='👍 Theek hai, thoda aur bachao!';
-    else if(pct<100) msg='⚠️ Zyada kharcha ho raha hai!';
-    else             msg='🚨 Income se zyada kharcha!';
+    if(pct===0)     msg='💰 Koi kharcha nahi!';
+    else if(pct<50) msg='✅ Bahut badhiya savings!';
+    else if(pct<80) msg='👍 Theek hai, thoda aur bachao!';
+    else if(pct<100)msg='⚠️ Zyada kharcha ho raha hai!';
+    else            msg='🚨 Income se zyada kharcha!';
   }
   document.getElementById('meter-msg').textContent=msg;
 }
 
+/* ── Build transaction card HTML ── */
 function txnCard(t){
-  const em  = EMOJI[t.cat]||'💰';
-  const sgn = t.type==='expense'?'-':'+';
-  const pb  = t.pay?`<span class="pay-badge ${t.pay}">${t.pay==='cash'?'💵 Cash':'📱 Online'}</span>`:'';
+  const em =EMOJI[t.cat]||'💰';
+  const sgn=t.type==='expense'?'-':'+';
+  const pb =t.pay?`<span class="pay-badge ${t.pay}">${t.pay==='cash'?'💵 Cash':'📱 Online'}</span>`:'';
   return `
-  <div class="txn-item ${t.type}">
-    <div class="txn-emoji">${em}</div>
-    <div class="txn-info">
-      <div class="txn-name">${t.name}</div>
-      <div class="txn-meta">${t.cat} · ${fmtDate(t.date)} ${pb}</div>
+  <div class="ti ${t.type}">
+    <div class="te">${em}</div>
+    <div class="ti-info">
+      <div class="ti-name">${t.name}</div>
+      <div class="ti-meta">${t.cat} · ${fmtDate(t.date)} ${pb}</div>
     </div>
-    <div class="txn-amount ${t.type}">${sgn}${fmt(t.amt)}</div>
+    <div class="ti-amt ${t.type}">${sgn}${fmt(t.amt)}</div>
     <button class="dots-btn" onclick="toggleMenu(${t.id})">⋮</button>
     <div class="dot-menu" id="dm-${t.id}">
       <div class="dot-item edit" onclick="openEdit(${t.id})">✏️ &nbsp;Edit</div>
@@ -627,23 +724,104 @@ function txnCard(t){
   </div>`;
 }
 
+/* ── Render History (last 2 days only) ── */
 function renderHist(){
-  const list = txns.filter(t=>{
-    if(cFilt==='all')     return true;
-    if(cFilt==='income')  return t.type==='income';
-    if(cFilt==='expense') return t.type==='expense';
-    if(cFilt==='cash')    return t.pay==='cash';
-    if(cFilt==='online')  return t.pay==='online';
-    return true;
+  const twoDaysAgo=daysAgo(1); // today + yesterday
+  let list=txns.filter(t=>{
+    if(!t.date) return false;
+    return t.date>=twoDaysAgo && t.date<=today();
   });
-  const el = document.getElementById('hist-list');
-  el.innerHTML = list.length===0
-    ? `<div class="empty"><div class="empty-ic">📋</div><div class="empty-tx">Koi transaction nahi.<br>Home se add karo! 😊</div></div>`
-    : list.map(txnCard).join('');
+  if(cFilt==='income')  list=list.filter(t=>t.type==='income');
+  if(cFilt==='expense') list=list.filter(t=>t.type==='expense');
+  if(cFilt==='cash')    list=list.filter(t=>t.pay==='cash');
+  if(cFilt==='online')  list=list.filter(t=>t.pay==='online');
+
+  const el=document.getElementById('hist-list');
+  el.innerHTML=list.length===0
+    ?`<div class="empty"><div class="empty-ic">📋</div><div class="empty-tx">Last 2 days mein koi transaction nahi.<br>Purani transactions Analysis mein dekho! 📊</div></div>`
+    :list.map(txnCard).join('');
 }
 
-function renderAll(){ renderSummary(); renderHist(); }
-renderAll();
+/* ── Analysis ── */
+function runAnalysis(){
+  const from=document.getElementById('ana-from').value;
+  const to  =document.getElementById('ana-to').value;
+  if(!from||!to){showToast('Dono dates select karo!');return;}
+  if(from>to){showToast('From date, To date se pehle honi chahiye!');return;}
+
+  const list=txns.filter(t=>t.date&&t.date>=from&&t.date<=to);
+
+  document.getElementById('ana-results').style.display='none';
+  document.getElementById('ana-empty').style.display='none';
+
+  if(list.length===0){
+    document.getElementById('ana-empty').style.display='block';
+    return;
+  }
+
+  const inc=list.filter(t=>t.type==='income').reduce((s,t)=>s+t.amt,0);
+  const exp=list.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amt,0);
+  const net=inc-exp;
+
+  document.getElementById('ana-inc').textContent=fmt(inc);
+  document.getElementById('ana-exp').textContent=fmt(exp);
+  document.getElementById('ana-net').textContent=fmt(net);
+  document.getElementById('ana-net').style.color=net>=0?'#1565c0':'#c62828';
+
+  // Category breakdown (expenses only)
+  const catMap={};
+  list.filter(t=>t.type==='expense').forEach(t=>{
+    catMap[t.cat]=(catMap[t.cat]||0)+t.amt;
+  });
+  const sorted=Object.entries(catMap).sort((a,b)=>b[1]-a[1]);
+  const cb=document.getElementById('cat-breakdown');
+  if(sorted.length===0){
+    cb.innerHTML='<div style="color:#aaa;font-size:13px;text-align:center;padding:10px">Koi expense nahi is range mein</div>';
+  } else {
+    cb.innerHTML=sorted.map(([cat,amt])=>`
+      <div class="cat-row">
+        <span class="cat-name">${EMOJI[cat]||'💰'} ${cat}</span>
+        <span class="cat-amt">₹${Number(amt).toLocaleString('en-IN')}</span>
+      </div>`).join('');
+  }
+
+  // Transaction list
+  document.getElementById('ana-txn-list').innerHTML=
+    list.map(t=>{
+      const em=EMOJI[t.cat]||'💰';
+      const sgn=t.type==='expense'?'-':'+';
+      const pb=t.pay?`<span class="pay-badge ${t.pay}">${t.pay==='cash'?'💵 Cash':'📱 Online'}</span>`:'';
+      return `
+      <div class="ti ${t.type}">
+        <div class="te">${em}</div>
+        <div class="ti-info">
+          <div class="ti-name">${t.name}</div>
+          <div class="ti-meta">${t.cat} · ${fmtDate(t.date)} ${pb}</div>
+        </div>
+        <div class="ti-amt ${t.type}">${sgn}${fmt(t.amt)}</div>
+      </div>`;
+    }).join('');
+
+  document.getElementById('ana-results').style.display='block';
+}
+
+/* ── Toast ── */
+function showToast(msg){
+  let t=document.getElementById('toast');
+  if(!t){
+    t=document.createElement('div');
+    t.id='toast';
+    t.style.cssText='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1a2035;color:#fff;padding:10px 20px;border-radius:20px;font-size:13px;font-weight:600;z-index:999;transition:opacity 0.3s;white-space:nowrap;';
+    document.body.appendChild(t);
+  }
+  t.textContent=msg;
+  t.style.opacity='1';
+  clearTimeout(t._timer);
+  t._timer=setTimeout(()=>t.style.opacity='0',2500);
+}
+
+/* ── Init ── */
+renderSummary();
 </script>
 </body>
 </html>
